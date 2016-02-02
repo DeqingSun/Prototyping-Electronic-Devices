@@ -1,4 +1,4 @@
-# Prototyping-Electronic-Devices
+# Prototyping Electronic Devices
 
 ITPG-GT 2845 | 4 units | Class#: 24253 | 01/25/2016 – 05/09/2016
 
