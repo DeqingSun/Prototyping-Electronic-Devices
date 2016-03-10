@@ -16,7 +16,7 @@ void loop() {
 // function that executes whenever data is received from master
 // this function is registered as an event, see setup()
 void receiveEvent(int howMany) {
-  if (Wire.available()) { // loop through all but the last
+  if (Wire.available()) { 
     x = Wire.read(); // receive byte as a character
     Serial.print("Slave Arduino receiving ");
     Serial.println(x, DEC);
