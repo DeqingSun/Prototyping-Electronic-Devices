@@ -20,12 +20,12 @@ void loop() {}
 void writeEEPROM(unsigned char deviceaddress, unsigned int eeaddress, byte data )
 {
   Wire.beginTransmission(deviceaddress);
-  Wire.write(eeaddress >> 8);   // MSB, Right shift 8 bits to get bit 8 to bit 15
-  Wire.write(eeaddress & 0xFF); // LSB, use AND logic to turn bit 8 to bit 15 to 0
+  Wire.write(highByte(eeaddress));
+  Wire.write(lowByte(eeaddress));
   Wire.write(data);
   Wire.endTransmission();
 
-  delay(10);  //wait 10 ms to make sure 
+  delay(10);  //wait 10 ms to make sure
 }
 
 byte readEEPROM(unsigned char deviceaddress, unsigned int eeaddress )
@@ -33,8 +33,8 @@ byte readEEPROM(unsigned char deviceaddress, unsigned int eeaddress )
   byte rdata = 0xFF;
 
   Wire.beginTransmission(deviceaddress);
-  Wire.write(eeaddress >> 8);   // MSB
-  Wire.write(eeaddress & 0xFF); // LSB
+  Wire.write(highByte(eeaddress));
+  Wire.write(lowByte(eeaddress));
   Wire.endTransmission();
 
   Wire.requestFrom(deviceaddress, 1);
