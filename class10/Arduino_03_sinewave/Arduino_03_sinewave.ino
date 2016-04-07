@@ -36,7 +36,7 @@ void updateControl(){
 }
 
 
-int updateAudio(){Arduino_02
+int updateAudio(){
   return aSin.next(); // return an int signal centred around 0
 }
 
