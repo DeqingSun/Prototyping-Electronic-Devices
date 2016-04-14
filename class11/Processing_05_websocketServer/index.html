@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Simple Web Socket Client</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<div id="content">
+	<fieldset>
+		<legend>Server Location</legend>
+		<div>
+			<label>URL:</label>
+			<input type="text" id="serverUrl" value="ws://"/>
+			<button id="connectButton">Open</button>
+			<button id="disconnectButton">Close</button>
+		</div>
+		<div>
+			<label>Status:</label>
+			<span id="connectionStatus">CLOSED</span>
+		</div>
+	</fieldset>
+	<fieldset id="requestArea">
+		<legend>Request</legend>
+		<div>
+			<textarea id="sendMessage" disabled="disabled"></textarea>
+		</div>
+		<div>
+			<button id="sendButton" disabled="disabled">Send</button>
+			[Shortcut] Ctr + Enter
+		</div>
+	</fieldset>
+	<fieldset id="messageArea">
+		<legend>Message Log <button id="clearMessage">Clear</button></legend>
+		<div id="messages"></div>
+	</fieldset>
+</div>
+<script type="text/javascript" src="lib/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
