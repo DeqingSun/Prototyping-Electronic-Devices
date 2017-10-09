@@ -6,8 +6,6 @@ Thu 6:30 PM – 9:00 PM at Conference Room with
 
 Deqing Sun (deqing.sun[at]nyu.edu)
 
-Peiqi Su (peiqi.su[at]nyu.edu)
-
 ![](https://raw.githubusercontent.com/DeqingSun/Prototyping-Electronic-Devices/master/img/how.png)
 
 The most difficult part of prototyping is not the building process, but the process of deciding how to build. If we choose proper technology for prototypes, we can improve their robustness and simplicity.
