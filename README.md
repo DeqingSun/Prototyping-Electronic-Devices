@@ -1,8 +1,8 @@
 # Prototyping Electronic Devices
 
-ITPG-GT 2845 | 4 units | Class#: 24253 | 01/25/2016 – 05/09/2016
+ITPG-GT 2845 | 4 units | Class#: 22599 | 9/10/2018 - 12/10/2018
 
-Thu 6:30 PM – 9:00 PM at Conference Room with
+Mo 6:30PM - 9:00PM at Room 406 with
 
 Deqing Sun (deqing.sun[at]nyu.edu)
 
