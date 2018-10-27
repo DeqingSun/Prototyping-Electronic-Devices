@@ -1,0 +1,4 @@
+{
+    "board": "arduino:samd:mzero_pro_bl_dbg",
+    "sketch": "SimplePlus.ino"
+}
