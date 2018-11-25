@@ -25,5 +25,15 @@ void exchangeDataI2C(unsigned char addr, unsigned char sendValue) {
   Wire.beginTransmission(addr); // transmit to device
   Wire.write(sendValue);     // sends one byte
   Wire.endTransmission();    // stop transmitting
+
+  Serial.print("Receiving from I2C device ");
+  Serial.println(addr);
+  Wire.requestFrom(addr, 1);    // request 1 bytes from slave device
+  while (Wire.available()) { // slave may send less than requested
+    int i2cValue = Wire.read();    // receive byte as an integer
+    Serial.print(i2cValue);         // print the integer
+    Serial.print(' ');
+  }
+  Serial.println();
 }
 
