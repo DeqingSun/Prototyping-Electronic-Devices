@@ -1,4 +1,0 @@
-{
-    "board": "arduino:samd:mzero_pro_bl_dbg",
-    "sketch": "debug_exercise1.ino"
-}
