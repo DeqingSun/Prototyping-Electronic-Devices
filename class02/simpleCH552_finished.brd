@@ -1369,27 +1369,6 @@ Metric Code Size 2012</description>
 </package3d>
 </packages3d>
 </library>
-<library name="adafruit" urn="urn:adsk.eagle:library:420">
-<packages>
-<package name="R1206" library_version="1">
-<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
-chip</description>
-<wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
-<wire x1="0.9525" y1="0.8128" x2="-0.9652" y2="0.8128" width="0.1524" layer="51"/>
-<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
-<smd name="2" x="1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
-<smd name="1" x="-1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
-<text x="-1.397" y="1.143" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.397" y="-2.413" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.6891" y1="-0.8763" x2="-0.9525" y2="0.8763" layer="51"/>
-<rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
-<rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
-</package>
-</packages>
-</library>
 <library name="myOwnLib">
 <packages>
 <package name="MY_IC_SO16">
@@ -1542,17 +1521,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-1.27" y="1.397" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
 <text x="-1.27" y="-2.032" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
 </package>
-<package name="PAD.03X.04" urn="urn:adsk.eagle:footprint:37962/1" library_version="1">
-<description>&lt;h3&gt;Electrically Conductive Pad 0.04" Circle&lt;/h3&gt;
-Used as a test point connection for pogo pins or other debugging tools. 
-&lt;p&gt;Specifications:
-&lt;li&gt;Area: 0.04" x 0.04"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
-</package>
 </packages>
 <packages3d>
 <package3d name="1X07_NO_SILK" urn="urn:adsk.eagle:package:38136/1" type="box" library_version="1">
@@ -1566,19 +1534,6 @@ CONN_07
 </description>
 <packageinstances>
 <packageinstance name="1X07_NO_SILK"/>
-</packageinstances>
-</package3d>
-<package3d name="PAD.03X.04" urn="urn:adsk.eagle:package:38287/1" type="box" library_version="1">
-<description>Electrically Conductive Pad 0.04" Circle
-Used as a test point connection for pogo pins or other debugging tools. 
-Specifications:
-Area: 0.04" x 0.04"
-
-Example device(s):
-TEST_POINT
-</description>
-<packageinstances>
-<packageinstance name="PAD.03X.04"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1828,9 +1783,6 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="-13.589" y="29.1084" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="16.621" y="7.7674" size="0.6096" layer="27" rot="R180"/>
 </element>
-<element name="F1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R1206" value="DNP" x="15.367" y="3.429" smashed="yes">
-<attribute name="LCSC" value="C151162" x="48.387" y="-41.021" size="1.778" layer="27" display="off"/>
-</element>
 <element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="20K" x="31.75" y="5.9944" smashed="yes">
 <attribute name="LCSC" value="C702832" x="31.75" y="5.9944" size="1.778" layer="27" display="off"/>
 <attribute name="POPULARITY" value="85" x="48.26" y="-7.9756" size="1.778" layer="27" display="off"/>
@@ -1855,8 +1807,6 @@ design rules under a new name.</description>
 <element name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X07_NO_SILK" package3d_urn="urn:adsk.eagle:package:38136/1" value="" x="13.081" y="11.0744" smashed="yes">
 <attribute name="VALUE" x="11.811" y="9.0424" size="0.6096" layer="27" font="vector" ratio="20"/>
 </element>
-<element name="TP1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="PAD.03X.04" package3d_urn="urn:adsk.eagle:package:38287/1" value="TEST-POINT3X4" x="11.938" y="5.0292" smashed="yes"/>
-<element name="TP2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="PAD.03X.04" package3d_urn="urn:adsk.eagle:package:38287/1" value="TEST-POINT3X4" x="11.938" y="7.0104" smashed="yes"/>
 <element name="S1" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" package="TACTILE_SWITCH_SMD_6.2MM_TALL" package3d_urn="urn:adsk.eagle:package:40172/1" value="MOMENTARY-SWITCH-SPST-SMD-6.2MM-TALL" x="37.211" y="5.9944" smashed="yes" rot="R270">
 <attribute name="LCSC" value="C557616" x="37.211" y="5.9944" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="PROD_ID" value="SWCH-11966" x="37.211" y="5.9944" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1963,8 +1913,6 @@ design rules under a new name.</description>
 <wire x1="19.92741875" y1="5.715" x2="22.1488" y2="5.715" width="0.254" layer="16"/>
 <wire x1="22.479" y1="6.858" x2="22.8092" y2="6.5278" width="0.254" layer="1"/>
 <wire x1="22.8092" y1="6.5278" x2="22.9616" y2="6.5278" width="0.254" layer="1"/>
-<contactref element="TP1" pad="P$1"/>
-<wire x1="11.938" y1="5.0292" x2="12.224" y2="5.0292" width="0.2032" layer="1"/>
 <wire x1="12.224" y1="5.0292" x2="12.2588" y2="4.9944" width="0.2032" layer="1"/>
 </signal>
 <signal name="USB_D+">
@@ -1989,8 +1937,6 @@ design rules under a new name.</description>
 <wire x1="27.24623125" y1="9.08523125" x2="29.0068" y2="9.08523125" width="0.2032" layer="16"/>
 <wire x1="29.0068" y1="9.08523125" x2="29.1084" y2="9.08523125" width="0.2032" layer="16"/>
 <wire x1="24.6634" y1="6.5024" x2="27.24623125" y2="9.08523125" width="0.2032" layer="16"/>
-<contactref element="TP2" pad="P$1"/>
-<wire x1="11.938" y1="7.0104" x2="11.9634" y2="6.985" width="0.2032" layer="1"/>
 <wire x1="11.9634" y1="6.985" x2="13.081" y2="6.985" width="0.2032" layer="1"/>
 <wire x1="29.1084" y1="9.08523125" x2="29.24408125" y2="9.08523125" width="0.2032" layer="16"/>
 <wire x1="29.24408125" y1="9.08523125" x2="29.3603125" y2="8.969" width="0.2032" layer="16"/>
@@ -2018,19 +1964,15 @@ design rules under a new name.</description>
 <wire x1="28.194" y1="7.58943125" x2="27.52544375" y2="7.58943125" width="0.2032" layer="16"/>
 </signal>
 <signal name="+5V">
-<contactref element="F1" pad="2"/>
 <contactref element="C1" pad="1"/>
 <contactref element="U1" pad="15"/>
 <contactref element="R2" pad="1"/>
-<contactref element="F1" pad="1"/>
 <contactref element="X1" pad="5V"/>
 <wire x1="16.7894" y1="6.2484" x2="16.637" y2="6.2484" width="0.3048" layer="1"/>
 <contactref element="J2" pad="2"/>
 <wire x1="16.637" y1="6.2484" x2="16.621" y2="6.2484" width="0.3048" layer="1"/>
 <wire x1="5.007" y1="2.4944" x2="10.2414" y2="2.4944" width="0.508" layer="1"/>
-<wire x1="11.176" y1="3.429" x2="13.945" y2="3.429" width="0.508" layer="1"/>
 <wire x1="10.2414" y1="2.4944" x2="11.176" y2="3.429" width="0.508" layer="1"/>
-<wire x1="16.789" y1="3.429" x2="16.789" y2="3.937" width="0.508" layer="1"/>
 <wire x1="16.789" y1="3.937" x2="16.789" y2="6.0964" width="0.508" layer="1"/>
 <wire x1="16.789" y1="6.0964" x2="16.637" y2="6.2484" width="0.508" layer="1"/>
 <wire x1="16.621" y1="6.2484" x2="16.7894" y2="6.2484" width="0.254" layer="1"/>
@@ -2039,19 +1981,15 @@ design rules under a new name.</description>
 <wire x1="16.7894" y1="6.2484" x2="17.78" y2="7.239" width="0.381" layer="1"/>
 <wire x1="19.685" y1="8.8138" x2="19.685" y2="8.001" width="0.381" layer="1"/>
 <wire x1="19.685" y1="8.001" x2="19.05" y2="7.366" width="0.381" layer="1"/>
-<wire x1="13.945" y1="3.429" x2="13.945" y2="3.912" width="0.2032" layer="1"/>
-<wire x1="13.945" y1="3.912" x2="14.859" y2="4.826" width="0.2032" layer="1"/>
-<wire x1="15.9" y1="4.826" x2="16.789" y2="3.937" width="0.2032" layer="1"/>
-<wire x1="14.859" y1="4.826" x2="15.9" y2="4.826" width="0.2032" layer="1"/>
 <via x="17.78" y="7.366" extent="1-16" drill="0.35"/>
 <wire x1="15.621" y1="11.0744" x2="15.621" y2="9.525" width="0.381" layer="16"/>
 <wire x1="15.621" y1="9.525" x2="17.78" y2="7.366" width="0.381" layer="16"/>
-<wire x1="16.789" y1="3.429" x2="17.8812" y2="4.5212" width="0.2032" layer="1"/>
 <wire x1="18.4299125" y1="4.5212" x2="18.8412" y2="4.9324875" width="0.2032" layer="1"/>
 <via x="18.8412" y="4.9324875" extent="1-16" drill="0.35"/>
 <wire x1="18.8412" y1="4.9324875" x2="19.384775" y2="4.9324875" width="0.2032" layer="16"/>
 <wire x1="19.384775" y1="4.9324875" x2="19.4404625" y2="4.8768" width="0.2032" layer="16"/>
-<wire x1="17.8812" y1="4.5212" x2="18.4299125" y2="4.5212" width="0.2032" layer="1"/>
+<wire x1="17.8812" y1="4.5212" x2="17.9832" y2="4.5212" width="0.2032" layer="1"/>
+<wire x1="17.9832" y1="4.5212" x2="18.4299125" y2="4.5212" width="0.2032" layer="1"/>
 <wire x1="19.4404625" y1="4.8768" x2="22.8759375" y2="4.8768" width="0.2032" layer="16"/>
 <wire x1="23.6633375" y1="5.6642" x2="25.025475" y2="5.6642" width="0.2032" layer="16"/>
 <wire x1="27.63370625" y1="8.27243125" x2="28.4769125" y2="8.27243125" width="0.2032" layer="16"/>
@@ -2085,6 +2023,10 @@ design rules under a new name.</description>
 <wire x1="32.7914" y1="10.475" x2="32.7914" y2="9.9822" width="0.2032" layer="1"/>
 <wire x1="39.461" y1="2.0194" x2="39.372" y2="1.9304" width="0.2032" layer="1"/>
 <wire x1="39.372" y1="1.9304" x2="38.0492" y2="1.9304" width="0.2032" layer="1"/>
+<wire x1="17.9832" y1="4.5212" x2="17.399" y2="3.937" width="0.2032" layer="1"/>
+<wire x1="17.399" y1="3.937" x2="16.789" y2="3.937" width="0.2032" layer="1"/>
+<wire x1="16.281" y1="3.429" x2="16.789" y2="3.937" width="0.508" layer="1"/>
+<wire x1="11.176" y1="3.429" x2="16.281" y2="3.429" width="0.508" layer="1"/>
 </signal>
 <signal name="P1.4">
 <contactref element="U1" pad="2"/>
