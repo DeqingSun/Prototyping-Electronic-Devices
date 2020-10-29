@@ -1,4 +1,4 @@
-volatile int pinPressedCount = 0;
+volatile unsigned char pinPressedCount = 0;
 
 void pin2LevelFalling() {
   pinPressedCount++;

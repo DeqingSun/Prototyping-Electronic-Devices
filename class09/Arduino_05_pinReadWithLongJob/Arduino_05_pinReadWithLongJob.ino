@@ -1,4 +1,4 @@
-int pinPressedCount = 0;
+unsigned char pinPressedCount = 0;
 bool prevPinLevel = HIGH;
 
 void setup() {
