@@ -19,7 +19,7 @@
             "targetArchitecture": "arm",    //pretend it is arm or it won't work
             "miDebuggerPath": "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\bin\\avr-gdb.exe", 
             "debugServerPath": "Z:\\Github\\dwire-debug\\dwdebug.exe",
-            "debugServerArgs": "verbose,gdbserver,device usbtiny1",
+            "debugServerArgs": "dwen,verbose,gdbserver,device usbtiny1",
             "MIMode": "gdb",  
             "osx": {
                 //if you are using mac, change the location to a valid one on your computer.
