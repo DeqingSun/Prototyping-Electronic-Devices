@@ -1,8 +1,8 @@
 #include <Arduino.h>
 
 void __attribute__ ((noinline)) testSimpleAdd(){
-  //volatile unsigned char b,c;
-  unsigned char b,c;
+  volatile unsigned char b,c;
+  //unsigned char b,c;
   volatile unsigned char d;
 
   asm("nop");
