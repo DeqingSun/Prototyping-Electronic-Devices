@@ -5,14 +5,15 @@ void setup() {
 
 void loop() {
   int inputArray[3]={1,2,3};
-  volatile int sum = 0;
+  volatile int product = 0;
   volatile int i;
+  asm("nop");
   for (i=0;i<=3;i++){
     volatile int inputNumber = inputArray[i];
-    sum = sum + inputNumber;
+    product = product * inputNumber;
     asm("nop");
   }
-  if (sum==6){
+  if (product==6){
     digitalWrite(LED_BUILTIN,HIGH);
   }
 
