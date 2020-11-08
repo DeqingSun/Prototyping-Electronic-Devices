@@ -5,7 +5,7 @@ void setup() {
 
 void loop() {
   int inputArray[3]={1,2,3};
-  volatile int product = 0;
+  volatile int product = 1;
   volatile int i;
   asm("nop");
   for (i=0;i<=3;i++){
