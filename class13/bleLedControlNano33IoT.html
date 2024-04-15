@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>webBluetooth for control LED</title>
+    <script>
+        //generate template on https://beaufortfrancois.github.io/sandbox/web-bluetooth/generator/
+
+        class LedTestInClass {
+
+            constructor() {
+                this.device = null;
+                this.onDisconnected = this.onDisconnected.bind(this);
+            }
+
+            request() {
+                let options = {
+                    "filters": [{
+                        "services": ["19b10000-e8f2-537e-4f6c-d104768a1214"]
+      }]
+                };
+                return navigator.bluetooth.requestDevice(options)
+                    .then(device => {
+                        this.device = device;
+                        this.device.addEventListener('gattserverdisconnected', this.onDisconnected);
+                    });
+            }
+
+            connect() {
+                if (!this.device) {
+                    return Promise.reject('Device is not connected.');
+                }
+                return this.device.gatt.connect();
+            }
+
+            readLed() {
+                return this.device.gatt.getPrimaryService("19b10000-e8f2-537e-4f6c-d104768a1214")
+                    .then(service => service.getCharacteristic("19b10001-e8f2-537e-4f6c-d104768a1214"))
+                    .then(characteristic => characteristic.readValue());
+            }
+
+            writeLed(data) {
+                return this.device.gatt.getPrimaryService("19b10000-e8f2-537e-4f6c-d104768a1214")
+                    .then(service => service.getCharacteristic("19b10001-e8f2-537e-4f6c-d104768a1214"))
+                    .then(characteristic => characteristic.writeValue(data));
+            }
+
+            disconnect() {
+                if (!this.device) {
+                    return Promise.reject('Device is not connected.');
+                }
+                return this.device.gatt.disconnect();
+            }
+
+            onDisconnected() {
+                console.log('Device is disconnected.');
+            }
+        }
+
+        var ledTestInClass = new LedTestInClass();
+        var timeoutTime = 10;
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            document.getElementById('connectButton').addEventListener('click', event => {
+                ledTestInClass.request()
+                    .then(_ => ledTestInClass.connect())
+                    .then(_ => {
+                        console.log("connected");
+                        document.getElementById('ledContainer').style.display = "block";
+                        document.getElementById('connectButton').style.display = "none";
+                        setInterval(function () {
+                            document.getElementById('notifyLabel').innerHTML = ('Will refresh and disconnect in :' + timeoutTime + ' seconds');
+                            if (timeoutTime == 0) {
+                                location.reload();
+                            } else {
+                                timeoutTime--;
+                            }
+
+                        }, 1000);
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    });
+            });
+
+            document.getElementById('ledCheckBox').addEventListener('change', function () {
+                var bytes = [0];
+                if (this.checked) {
+                    bytes[0] = 1;
+                } else {
+                    bytes[0] = 0;
+                }
+                var buffer = new Uint8Array(bytes).buffer;
+                var data = new DataView(buffer);
+                ledTestInClass.writeLed(data).then(_ => console.log(_))
+                    .catch(error => {
+                        console.log(error)
+                    });
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <button type="button" id='connectButton'>Connect</button>
+    <br>
+    <br>
+    <label class="container" style="display: none" id='ledContainer'>LED on?
+        <input type="checkbox" id='ledCheckBox'>
+    </label>
+    <br>
+    <label id="notifyLabel"></label>
+
+</body>
+
+</html>
