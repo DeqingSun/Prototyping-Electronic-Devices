@@ -3632,6 +3632,41 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 </deviceset>
 </devicesets>
 </library>
+<library name="supply2" urn="urn:adsk.eagle:library:372">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+Please keep in mind, that these devices are necessary for the
+automatic wiring of the supply signals.&lt;p&gt;
+The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="GND" urn="urn:adsk.eagle:symbol:26990/1" library_version="2">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<text x="-1.905" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" urn="urn:adsk.eagle:component:27037/1" prefix="SUPPLY" library_version="2">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="GND" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3651,6 +3686,9 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <part name="C1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10UF-POLAR" device="-RADIAL-2.5MM-25V-20%" package3d_urn="urn:adsk.eagle:package:41385083/1" value="10uF"/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_07" device="NO_SILK" package3d_urn="urn:adsk.eagle:package:38136/2"/>
 <part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_07" device="NO_SILK" package3d_urn="urn:adsk.eagle:package:38136/2"/>
+<part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3673,17 +3711,17 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <attribute name="NAME" x="14.478" y="55.88" size="1.778" layer="95" font="vector" align="center-right"/>
 <attribute name="VALUE" x="17.78" y="60.452" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
-<instance part="D1" gate="D1" x="5.08" y="15.24" smashed="yes">
-<attribute name="NAME" x="1.651" y="10.668" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="6.985" y="10.668" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+<instance part="D1" gate="D1" x="101.6" y="27.94" smashed="yes">
+<attribute name="NAME" x="98.171" y="23.368" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="103.505" y="23.368" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
-<instance part="R1" gate="G$1" x="7.62" y="25.4" smashed="yes">
-<attribute name="NAME" x="7.62" y="26.924" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="7.62" y="23.876" size="1.778" layer="96" font="vector" align="top-center"/>
+<instance part="R1" gate="G$1" x="91.44" y="30.48" smashed="yes">
+<attribute name="NAME" x="91.44" y="32.004" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="91.44" y="28.956" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="C1" gate="G$1" x="-20.32" y="33.02" smashed="yes">
-<attribute name="NAME" x="-19.304" y="33.655" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="-19.304" y="28.829" size="1.778" layer="96" font="vector"/>
+<instance part="C1" gate="G$1" x="12.7" y="81.28" smashed="yes">
+<attribute name="NAME" x="13.716" y="81.915" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="13.716" y="77.089" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="J1" gate="J1" x="127" y="40.64" smashed="yes" rot="R180">
 <attribute name="VALUE" x="132.08" y="50.546" size="1.778" layer="96" font="vector" rot="R180"/>
@@ -3692,6 +3730,15 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <instance part="J2" gate="J1" x="149.86" y="40.64" smashed="yes" rot="R180">
 <attribute name="VALUE" x="154.94" y="50.546" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="154.94" y="27.432" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
+<instance part="SUPPLY1" gate="GND" x="17.78" y="48.26" smashed="yes">
+<attribute name="VALUE" x="15.875" y="45.085" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY2" gate="GND" x="12.7" y="73.66" smashed="yes">
+<attribute name="VALUE" x="10.795" y="70.485" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY3" gate="GND" x="101.6" y="20.32" smashed="yes">
+<attribute name="VALUE" x="99.695" y="17.145" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -3708,13 +3755,13 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <pinref part="J1" gate="J1" pin="2"/>
 <label x="116.84" y="43.18" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="144.78" y1="68.58" x2="137.16" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="J4" gate="G$1" pin="9"/>
+<label x="139.7" y="68.58" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="5V" class="0">
-<segment>
-<pinref part="U1" gate="U1" pin="AVCC"/>
-<wire x1="33.02" y1="83.82" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
-<label x="22.86" y="83.82" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U1" gate="U1" pin="VCC"/>
 <wire x1="33.02" y1="81.28" x2="22.86" y2="81.28" width="0.1524" layer="91"/>
@@ -3725,6 +3772,26 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <pinref part="J2" gate="J1" pin="2"/>
 <label x="139.7" y="43.18" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="144.78" y1="60.96" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="J4" gate="G$1" pin="12"/>
+<label x="139.7" y="60.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="144.78" y1="71.12" x2="137.16" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="J4" gate="G$1" pin="8"/>
+<label x="139.7" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="U1" pin="AVCC"/>
+<wire x1="33.02" y1="83.82" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
+<label x="22.86" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="+"/>
+<wire x1="12.7" y1="83.82" x2="12.7" y2="86.36" width="0.1524" layer="91"/>
+<label x="12.7" y="86.36" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="AREF" class="0">
 <segment>
@@ -3732,19 +3799,27 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <wire x1="33.02" y1="73.66" x2="22.86" y2="73.66" width="0.1524" layer="91"/>
 <label x="22.86" y="73.66" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="144.78" y1="66.04" x2="137.16" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="J4" gate="G$1" pin="10"/>
+<label x="139.7" y="66.04" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="XTAL1" class="0">
 <segment>
 <pinref part="U1" gate="U1" pin="PB6(XTAL1/TOSC1)"/>
-<wire x1="33.02" y1="63.5" x2="22.86" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="63.5" x2="15.24" y2="63.5" width="0.1524" layer="91"/>
 <label x="22.86" y="63.5" size="1.778" layer="95"/>
+<pinref part="Y1" gate="G$1" pin="1"/>
+<wire x1="15.24" y1="58.42" x2="15.24" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="XTAL2" class="0">
 <segment>
 <pinref part="U1" gate="U1" pin="PB7(XTAL2/TOSC2)"/>
-<wire x1="33.02" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="58.42" x2="20.32" y2="58.42" width="0.1524" layer="91"/>
 <label x="22.86" y="58.42" size="1.778" layer="95"/>
+<pinref part="Y1" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -3757,6 +3832,28 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <wire x1="144.78" y1="45.72" x2="137.16" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="J2" gate="J1" pin="1"/>
 <label x="139.7" y="45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="144.78" y1="73.66" x2="137.16" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="J4" gate="G$1" pin="7"/>
+<label x="139.7" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="144.78" y1="63.5" x2="137.16" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="J4" gate="G$1" pin="11"/>
+<label x="139.7" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="Y1" gate="G$1" pin="2"/>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="-"/>
+<pinref part="SUPPLY2" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="D1" gate="D1" pin="C"/>
+<pinref part="SUPPLY3" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="A0" class="0">
@@ -3818,6 +3915,11 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <pinref part="J4" gate="G$1" pin="2"/>
 <label x="139.7" y="86.36" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="144.78" y1="58.42" x2="137.16" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="J4" gate="G$1" pin="13"/>
+<label x="139.7" y="58.42" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="A5" class="0">
 <segment>
@@ -3829,6 +3931,11 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <wire x1="144.78" y1="88.9" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="J4" gate="G$1" pin="1"/>
 <label x="139.7" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="144.78" y1="55.88" x2="137.16" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="J4" gate="G$1" pin="14"/>
+<label x="139.7" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D0" class="0">
@@ -4012,6 +4119,7 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <pinref part="U1" gate="U1" pin="PB5(SCK)"/>
 <wire x1="76.2" y1="30.48" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
 <label x="78.74" y="30.48" size="1.778" layer="95"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="J3" gate="G$1" pin="14"/>
@@ -4022,54 +4130,6 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <wire x1="121.92" y1="33.02" x2="114.3" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="J1" gate="J1" pin="6"/>
 <label x="116.84" y="33.02" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$21" class="0">
-<segment>
-<wire x1="144.78" y1="73.66" x2="137.16" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="J4" gate="G$1" pin="7"/>
-</segment>
-</net>
-<net name="N$22" class="0">
-<segment>
-<wire x1="144.78" y1="71.12" x2="137.16" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="J4" gate="G$1" pin="8"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<wire x1="144.78" y1="68.58" x2="137.16" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="J4" gate="G$1" pin="9"/>
-</segment>
-</net>
-<net name="N$24" class="0">
-<segment>
-<wire x1="144.78" y1="66.04" x2="137.16" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="J4" gate="G$1" pin="10"/>
-</segment>
-</net>
-<net name="N$25" class="0">
-<segment>
-<wire x1="144.78" y1="63.5" x2="137.16" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="J4" gate="G$1" pin="11"/>
-</segment>
-</net>
-<net name="N$26" class="0">
-<segment>
-<wire x1="144.78" y1="60.96" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="J4" gate="G$1" pin="12"/>
-</segment>
-</net>
-<net name="N$27" class="0">
-<segment>
-<wire x1="144.78" y1="58.42" x2="137.16" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="J4" gate="G$1" pin="13"/>
-</segment>
-</net>
-<net name="N$28" class="0">
-<segment>
-<wire x1="144.78" y1="55.88" x2="137.16" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="J4" gate="G$1" pin="14"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -4106,6 +4166,13 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <segment>
 <wire x1="121.92" y1="30.48" x2="114.3" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="J1" gate="J1" pin="7"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="D1" gate="D1" pin="A"/>
+<wire x1="101.6" y1="30.48" x2="96.52" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
